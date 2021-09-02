@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Esto es un posteo
+{% endblock %}
+{% block archivos_css %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<section id="summary">
+        <h2>Un titulo</h2>
+        <article>
+            <img src="{% static 'blog/images/programador.png' %}" alt="Imagen de post">
+            <address>Escrito por Gabriela</address>
+            <div>
+                Ultima actualización <time>11 de agosto</time>
+            </div>
+        </article>
+    </section>
+    <main>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic necessitatibus repellat beatae quod sunt, doloremque tempora, eveniet est eaque possimus, numquam error vel quasi minima accusamus corporis non facilis. Vitae?
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic necessitatibus repellat beatae quod sunt, doloremque tempora, eveniet est eaque possimus, numquam error vel quasi minima accusamus corporis non facilis. Vitae?
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic necessitatibus repellat beatae quod sunt, doloremque tempora, eveniet est eaque possimus, numquam error vel quasi minima accusamus corporis non facilis. Vitae?
+        </p>
+    </main>
+
+
+{% endblock %}
