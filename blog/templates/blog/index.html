@@ -19,8 +19,9 @@
         <ul>
             <li>
                 <article class="post">
-                    {% include "blog/includes/post.html" %}
-                    {% include "blog/includes/post.html" %}
+                    {% for posteo in posteos %}
+                         {% include "blog/includes/post.html" %}
+                    {% endfor %}
                 </article>
             </li>
         </ul>

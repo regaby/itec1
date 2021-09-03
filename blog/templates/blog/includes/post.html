@@ -1,8 +1,13 @@
 {% load static %}
-<a href="{% url 'post-detail-page' 'curso-python' %}">
-    <img src="{% static 'blog/images/django.jpg' %}" alt="Curso Django">
-    <div class="post__content">
-        <h3>Curso Django</h3>
-        <p>En este curso aprenderás a desarrollar sitios y aplicaciones web con python y el framework django</p>
-    </div>
-</a>
+<li>
+    <article class="post">
+        <a href="{% url 'post-detail-page' posteo.titulo|slugify %}">
+            <img src="{% static posteo.imagen %}" alt={{ posteo.titulo }}>
+            <div class="post__content">
+                <h3>{{ posteo.titulo }}</h3>
+                <h3>{{ posteo.fecha|date:"d/m/Y" }}</h3>
+                <p>{{ posteo.resumen }}</p>
+            </div>
+        </a>
+    </article>
+</li>
