@@ -2,7 +2,8 @@
 <li>
     <article class="post">
         <a href="{% url 'post-detail-page' posteo.titulo|slugify %}">
-            <img src="{% static posteo.imagen %}" alt={{ posteo.titulo }}>
+            {% comment %} <img src="{% static posteo.imagen %}" alt={{ posteo.titulo }}> {% endcomment %}
+            <img src="{{ posteo.image.url }}" alt="">
             <div class="post__content">
                 <h3>{{ posteo.titulo }}</h3>
                 <h3>{{ posteo.fecha|date:"d/m/Y" }}</h3>

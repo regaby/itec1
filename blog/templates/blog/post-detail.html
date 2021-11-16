@@ -13,13 +13,18 @@
 <section id="summary">
         <h2>{{ curso.titulo }}</h2>
         <article>
-            <img src="{% static curso.imagen %}" alt={{ curso.titulo }}>
-            <address>Escrito por {{curso.autor}}</address>
+            {% comment %} <img src="{% static curso.imagen %}" alt={{ curso.titulo }}> {% endcomment %}
+            <img src="{{ posteo.image.url }}" alt="">
+            <address>Escrito por <a href="mailto:{{curso.autor.email}}">{{curso.autor}}</a> </address>
             <div>
                 Ultima actualización <time>{{curso.fecha|date:"d/m/Y"}}</time>
                  <p> <strong>Modalidad:</strong>  {{curso.modalidad}}</p>
             </div>
         </article>
+        {% for categ in categorias %}
+            <span>{{categ.nombre}}
+            </span>
+        {% endfor %}
     </section>
     <main>
         <p>
